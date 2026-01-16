@@ -1,6 +1,6 @@
 # AI Photography Quality Auditor
 
-A technical audit and critical mentorship tool for photographers. This uses Gemini 2.5 Flash to perform simultaneous hardware-level diagnostics and professional critiques through a agentic multimodal pipeline
+A technical audit and critical mentorship tool for photographers. This uses Gemini 2.5 Flash to perform simultaneous hardware-level diagnostics and professional critiques through an agentic multimodal pipeline
 
 ## Features
 - Multimodal Analysis: Combines raw pixel data with extracted EXIF metadata to cross-reference hardware settings against visual results

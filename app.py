@@ -130,7 +130,7 @@ with st.sidebar:
 if uploaded_file:
     head_col, btn_col = st.columns([3, 1])
     with head_col:
-        st.title("Photograph Quality Agent")
+        st.title("Photography Quality Auditor")
         st.markdown("<p class='caption-text'>A technical audit and professional critique</p>", unsafe_allow_html=True)
     with btn_col:
         st.write(" ") 

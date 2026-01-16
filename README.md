@@ -1,20 +1,21 @@
 # AI Photography Quality Auditor
 
-A technical multi-agent system built with **Gemini 2.5 Flash** and **Python** to analyze digital photography quality by cross-referencing raw EXIF metadata with visual pixel analysis.
+A technical audit and critical mentorship tool for photographers. This uses Gemini 2.5 Flash to perform simultaneous hardware-level diagnostics and professional critiques through a agentic multimodal pipeline
 
 ## Features
-- **Metadata Extraction:** Reads ISO, F-stop, Shutter Speed, and Exposure Bias.
-- **Forensic Analysis:** Identifies "Software Bokeh" vs. Optical blur.
-- **Automated Reporting:** Generates a technical health grade (A-F) based on hardware performance.
+- Multimodal Analysis: Combines raw pixel data with extracted EXIF metadata to cross-reference hardware settings against visual results
+- Provides advanced technical advice for professional photography in key fields like color theory and lighting
+- Automatically cleans EXIF logs by stripping unreadable binary fields
+- Zero-bloat local host UI for user convenience
 
 ## Tech Stack
-- **AI Model:** Gemini 2.5 Flash
-- **Framework:** Google Generative AI SDK
+- **Model:** Gemini 2.5 Flash
+- **UI:** Streamlit
 - **Imaging:** Pillow (PIL)
-- **Environment:** Python 3.10+, Dotenv, Git
+- **Environment:** Python 3.10+, Dotenv
 
 ## Installation
 1. Clone the repo: `git clone <your-url>`
 2. Install requirements: `pip install -r requirements.txt`
 3. Add your `GOOGLE_API_KEY` to a `.env` file.
-4. Run `python agent.py`.
+4. Run `streamlit run app.py`.

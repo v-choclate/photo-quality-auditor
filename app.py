@@ -154,7 +154,7 @@ if uploaded_file:
     with col_right:
         if run_audit:
             st.markdown("<div class='report-container lekton-output'>", unsafe_allow_html=True)
-            with st.spinner("Processing..."):
+            with st.spinner("Processing image..."):
                 img_byte_arr = io.BytesIO()
                 image.convert("RGB").save(img_byte_arr, format='JPEG')
                 image_bytes = img_byte_arr.getvalue()
@@ -166,19 +166,21 @@ if uploaded_file:
     METADATA:
     {metadata}
     
-    HARDWARE HEALTH AUDIT (You are very concise, objective, and technical)
+    HARDWARE HEALTH AUDIT (You are very concise, objective, and technical) (format this title as a header)
     1. Compare the Aperture (F-stop) and ISO to the visual noise and blur.
     2. Check high-contrast edges for "Chromatic Aberration" (color fringing).
     3. Identify if any "Software Simulation" (like Portrait Mode) was used.
     4. Check if the Exposure Bias (e.g., -2.8) matches the lighting conditions.
-    5. Check if the Camera Clock or Software tags suggest any errors (e.g., date mismatches).
-    6. Scan the sky and flat color areas for "Sensor Dust" (dark circular spots). Note that dust is most visible at small apertures (f/8 - f/22).
-    7. Provide a VERY CONCISE SUMMARY OF "Technical Health Report" with a grade (A-F).
+    5. Scan the sky and flat color areas for "Sensor Dust" (dark circular spots). Note that dust is most visible at small apertures (f/8 - f/22).
+    6. Check if the Camera Clock or Software tags suggest any errors (e.g., date mismatches).
+    7. Provide a summary "Technical Health Report" with a grade (A-F). (a concise paragraph with no bullet points)
 
-    PHOTOGRAPHY MENTORING (You are thorough and critical, not overly encouraging)
-    1. Provide a detailed but concise critique focusing on important photographic elements: composition, lighting, focus, subject, color theory, and storytelling.
+    PHOTOGRAPHY MENTORING (You are thorough and critical, not overly encouraging) (format this title as a header)
+    1. Provide a detailed but concise critique focusing on important photographic elements: composition, lighting, focus, subject, color theory, and storytelling. (Write each element (and any other you feel is key that isn't already listed) as bullet points)
     2. IF APPLICABLE provide suggestions that could improve photo quality specific to the photo at hand
-    3. Provide a VERY CONCISE SUMMARY OF "Mentoring Report" with a grade (A-F).
+    3. Provide a summary "Mentoring Report" with a grade (A-F). (a concise paragraph with no bullet points)
+
+    Regarding the output, do NOT repeat your instructions (e.g., don't use the phrases "very concise", "detailed but concise critique", etc.) in the final response.
     """
                 try:
                     response = client.models.generate_content(

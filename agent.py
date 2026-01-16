@@ -26,6 +26,9 @@ def get_photo_metadata(image_path: str) -> dict:
                 tag_name = TAGS.get(tag_id, tag_id)
                 readable[tag_name] = value
             
+            if 'MakerNote' in readable:
+                del readable['MakerNote']
+
             return readable
     except Exception as e:
         return {"error": str(e)}

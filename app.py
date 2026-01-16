@@ -21,7 +21,7 @@ def get_photo_metadata(uploaded_file) -> dict:
             
             readable = {TAGS.get(tag_id, tag_id): value for tag_id, value in exif_data.items()}
             
-            # extract deeper exif tags (aperture, iso, etc)
+            # extract deeper exif tags
             exif_ifd = exif_data.get_ifd(0x8769)
             for tag_id, value in exif_ifd.items():
                 tag_name = TAGS.get(tag_id, tag_id)
@@ -166,7 +166,7 @@ if uploaded_file:
     METADATA:
     {metadata}
     
-    PART 1: HARDWARE HEALTH AUDIT (You are very concise, objective, and technical)
+    HARDWARE HEALTH AUDIT (You are very concise, objective, and technical)
     1. Compare the Aperture (F-stop) and ISO to the visual noise and blur.
     2. Check high-contrast edges for "Chromatic Aberration" (color fringing).
     3. Identify if any "Software Simulation" (like Portrait Mode) was used.
@@ -175,7 +175,7 @@ if uploaded_file:
     6. Scan the sky and flat color areas for "Sensor Dust" (dark circular spots). Note that dust is most visible at small apertures (f/8 - f/22).
     7. Provide a VERY CONCISE SUMMARY OF "Technical Health Report" with a grade (A-F).
 
-    PART 2: PHOTOGRAPHY MENTORING (You are thorough and critical, not overly encouraging)
+    PHOTOGRAPHY MENTORING (You are thorough and critical, not overly encouraging)
     1. Provide a detailed but concise critique focusing on important photographic elements: composition, lighting, focus, subject, color theory, and storytelling.
     2. IF APPLICABLE provide suggestions that could improve photo quality specific to the photo at hand
     3. Provide a VERY CONCISE SUMMARY OF "Mentoring Report" with a grade (A-F).

@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 # setup
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-MODEL_ID = "gemini-2.5-flash"
+MODEL_ID = "gemini-3-flash-preview"
 
 def get_photo_metadata(uploaded_file) -> dict:
     try:
@@ -37,7 +37,7 @@ def get_photo_metadata(uploaded_file) -> dict:
 # ui config
 st.set_page_config(page_title="Photograph Quality Agent", layout="wide", initial_sidebar_state="expanded")
 
-# high-contrast dark theme
+# dark theme
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Lekton&display=swap');
